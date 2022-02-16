@@ -1,0 +1,50 @@
+.body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.home {
+  display: grid;
+  grid-template-areas: 
+    "header header header header"
+    "sidebar list list list"
+    "sidebar list list list"
+    " . list list list";
+  grid-template-rows: 100px 1fr 1fr;
+  grid-template-columns: 200px 1fr 1fr 1fr;
+}
+
+.header {
+  grid-area: header;
+}
+
+.list {
+  grid-area: list;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.tshirt-card {
+  border: 2px solid grey;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 300px;
+  width: 300px;
+  border-radius: 5px;
+}
+
+.tshirt-card img {
+  height: 60%;
+}
+
+
+.sidebar {
+  grid-area: sidebar;
+  border: 1px solid grey;
+  margin-right: 20px;
+  border-radius: 5px;
+}
